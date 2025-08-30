@@ -21,13 +21,13 @@ public class HashTable {
 
         while (tabela[pos] != null) {
             if (tabela[pos].getCPF().equals(p.getCPF())) {
-                System.out.println("Erro: CF já cadastrado!");
+                System.out.println("Erro: CPF já cadastrado!");
                 return;
             }
             pos = (pos + 1) % tamanho;
-
-            tabela[pos] = p;
         }
+        tabela[pos] = p;
+
     }
 
     public Pessoa buscar(String CPF) {
