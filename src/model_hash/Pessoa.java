@@ -1,14 +1,14 @@
 package model_hash;
 
 public class Pessoa {
-    private String nome;
     private String CPF;
+    private String nome;
     private int idade;
 
 
-    public Pessoa(String nome, String CPF, int idade) {
-        this.nome = nome;
+    public Pessoa(String CPF, String nome, int idade) {
         this.CPF = CPF;
+        this.nome = nome;
         this.idade = idade;
     }
 
@@ -26,7 +26,7 @@ public class Pessoa {
 
     @Override
     public String toString(){
-        return " Nome: " + nome + ", CPF: " + CPF + ", Idade: " + idade;
+        return " CPF: " + CPF + ", nome: " + nome + ", Idade: " + idade;
     }
 
 
