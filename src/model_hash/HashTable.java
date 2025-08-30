@@ -19,16 +19,22 @@ public class HashTable {
     public void inserir(Pessoa p) {
         int pos = hash(p.getCPF());
 
-        while (tabela[pos] != null) {
-            if (tabela[pos].getCPF().equals(p.getCPF())) {
-                System.out.println("Erro: CPF já cadastrado!");
-                return;
-            }
-            pos = (pos + 1) % tamanho;
-        }
-        tabela[pos] = p;
 
-    }
+        if (p.validadorCPF() == false) {
+
+        }
+            while (tabela[pos] != null) {
+                if (tabela[pos].getCPF().equals(p.getCPF())) {
+                    System.out.println("Erro: CPF já cadastrado!");
+                    return;
+                }
+                pos = (pos + 1) % tamanho;
+            }
+            tabela[pos] = p;
+            System.out.println("Pessoa cadastrada com sucesso!");
+
+        }
+
 
     public Pessoa buscar(String CPF) {
         int pos = hash(CPF);

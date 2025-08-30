@@ -30,7 +30,6 @@ public class Main {
 
                 Pessoa p = new Pessoa(CPF, nome, idade);
                 tabela.inserir(p);
-                System.out.println("Pessoa cadastrada com sucesso!");
 
             } else if (op == 2) {
                 System.out.println("Digite o CPF: ");
