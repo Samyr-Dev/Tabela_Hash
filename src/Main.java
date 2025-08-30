@@ -18,7 +18,7 @@ public class Main {
             System.out.println("Opção: ");
 
             int op = sc.nextInt();
-            sc.nextLine(); // consumir quebra de linha
+            sc.nextLine();
 
             if (op == 1) {
                 System.out.println("Digite o CPF: ");

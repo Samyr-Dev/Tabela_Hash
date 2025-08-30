@@ -22,7 +22,7 @@ public class HashTable {
 
         if (p.validadorCPF() == false) {
 
-        }
+        } else {
             while (tabela[pos] != null) {
                 if (tabela[pos].getCPF().equals(p.getCPF())) {
                     System.out.println("Erro: CPF já cadastrado!");
@@ -34,10 +34,12 @@ public class HashTable {
             System.out.println("Pessoa cadastrada com sucesso!");
 
         }
+    }
 
 
     public Pessoa buscar(String CPF) {
         int pos = hash(CPF);
+
 
         while (tabela[pos] != null) {
             if (tabela[pos].getCPF().equals(CPF)) {
